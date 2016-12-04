@@ -13,6 +13,6 @@ RUN apk update && \
     mkdir ~/.ssh && \
     ssh-keyscan $ADD_KNOWN_HOSTS >> ~/.ssh/known_hosts && \
     mkdir -p $CLONE_TO/html/html && \
-    rm -r $CLONE_TO/* && \
-    git clone --single-branch --branch $BRANCH $CLONE_FROM $CLONE_TO
-CMD ["-verbose"]
+    rm -r $CLONE_TO/*
+    
+CMD git clone --single-branch --branch $BRANCH $CLONE_FROM $CLONE_TO
