@@ -15,3 +15,4 @@ RUN apk update && \
     mkdir -p $CLONE_TO/html/html && \
     rm -r $CLONE_TO/* && \
     git clone --single-branch --branch $BRANCH $CLONE_FROM $CLONE_TO
+CMD ["-verbose"]
